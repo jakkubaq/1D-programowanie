@@ -5,7 +5,14 @@
 
 int main()
 {
-    std::cout << "Hello World!\n";
+	std::cout << "Hel\tlo World!\n"; //sta³¹ ³añcuchowa od 0 do 4 miliardów znaków
+	std::cout << "Nazywam sie Jakub Stylec\n";
+	std::cout << "Nazywam sie Jakub Stylec\n";
+	std::cout << 'X';
+	std::cout << "\n";
+	std::cout << "\n";
+	std::cout << 568 << "\n"; //sta³a liczbowa ca³kowita
+	std::cout << 12.5 << "\n"; //sta³a liczbowa rzeczwysita
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
