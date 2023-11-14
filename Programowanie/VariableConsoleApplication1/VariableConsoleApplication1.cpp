@@ -53,17 +53,93 @@ void task3()
 /*Napisz program, który poprosi u¿ytkownika o podanie d³ugoœci podstawy i wysokoœci trójk¹ta, a nastêpnie obliczy pole tego trójk¹ta, wyœwietlaj¹c wynik.*/
 void task4()
 {
-	float baselength;
+	float baseLength;
 	std::cout << "podaj d³ugosc podstawy\n";
-	std::cin >> baselength;
+	std::cin >> baseLength;
 
-	float heightlength;
+	float heightLength;
 	std::cout << "podaj d³ugosc wysokosci\n";
-	std::cin >> heightlength;
+	std::cin >> heightLength;
 
-	float areaofatriangle;
-	areaofatriangle = baselength * heightlength/2;
-	std::cout << "pole trójk¹ta wynosi:" << areaofatriangle << "\n";
+	float areaOfTtriangle;
+	areaOfTtriangle = baseLength * heightLength/2;
+	std::cout << "pole trójk¹ta wynosi:" << areaOfTtriangle << "\n";
+}
+
+/*Napisz program, który poprosi u¿ytkownika o podanie promienia ko³a i obliczy pole tego ko³a, wyœwietlaj¹c wynik.*/
+void task5()
+{
+	float circleRadius;
+	std::cout << "Podaj d³ugosc promienia ko³a\n";
+	std::cin >> circleRadius;
+
+	float areaOfaCircle;
+	areaOfaCircle = circleRadius * 3.14;
+	std::cout << "Pole wynosi:" << areaOfaCircle << "\n";
+}
+
+/*Napisz program, który poprosi u¿ytkownika o podanie d³ugoœci podstawy a, podstawy b i wysokoœci h trapezu, a nastêpnie obliczy pole tego trapezu, wyœwietlaj¹c wynik.*/
+void task6()
+{
+	float baseLengthA;
+	std::cout << "Podaj d³ugosc Podsawy A:\n";
+	std::cin >> baseLengthA;
+
+	float baseLengthB;
+	std::cout << "Podaj d³ugosc Podstawy B:\n";
+	std::cin >> baseLengthB;
+
+	float heightOfTheTrapezoidH;
+	std::cout << "Podaj wysokosc tarapezu H:\n";
+	std::cin >> heightOfTheTrapezoidH;
+
+	float areaOfaTrapezoid;
+	areaOfaTrapezoid = (baseLengthA + baseLengthB) * heightOfTheTrapezoidH / 2;
+	std::cout << "Pole trapeza wynosi:\n" << areaOfaTrapezoid << "\n";
+}
+
+/*Napisz program, który poprosi u¿ytkownika o podanie d³ugoœci krawêdzi szeœcianu i obliczy jego objêtoœæ, wyœwietlaj¹c wynik.*/
+void task7()
+{
+	float edgeLength;
+	std::cout << "Podaj d³ugoœci krawêdzi szeœcianu:\n";
+	std::cin >> edgeLength;
+
+	float areaOfCube;
+	areaOfCube = edgeLength * edgeLength * edgeLength;
+	std::cout << "Objetosc szescianu wynosi : \n" << areaOfCube << "\n";
+}
+/*Napisz program, który poprosi u¿ytkownika o podanie temperatury w stopniach Celsiusza, a nastêpnie przeliczy j¹ na stopnie Fahrenheita i wyœwietli wynik.*/
+void task8()
+{
+	float tempC;
+	std::cout << "Podaj temperature w celcjuszach\n";
+	std::cin >> tempC;
+
+	float tempF;
+	tempF = 2 * tempC + 32;
+	std::cout << "Temperatura w fahrenheit wynosi:\n" << tempF << "\n";
+}
+
+/*Napisz program, który konwertuje wprowadzon¹ kwotê w jednej walucie na inn¹, korzystaj¹c z okreœlonego kursu wymiany.*/
+void task9()
+{
+	float PLN;
+	std::cout << "podaj ilosc w PLN\n";
+	std::cin >> PLN;
+	
+	float euro;
+	euro = PLN / 4.42;
+	std::cout << "Kwota w euro wynosi:\n" << euro << "\n";
+}
+
+/*Napisz program, który poprosi u¿ytkownika o podanie dwóch liczb (a, b) i obliczy œredni¹ arytmetyczn¹ tych liczb. Nastêpnie wyœwietli wynik.*/
+void task10()
+{
+	float numberA;
+	std::cout << "Podaj liczbe A\n";
+	std::cin >> "Poda"
+
 }
 
 int main()
@@ -72,7 +148,14 @@ int main()
 	//task1();
 	//task2();
 	//task3();
-	task4();
+	//task4();
+	//task5();
+	//task6();
+	//task7();
+	//task8();
+	//task9();
+	task10();
+
 }
 
 
