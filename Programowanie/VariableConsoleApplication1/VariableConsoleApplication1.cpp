@@ -46,8 +46,8 @@ void task3()
 	std::cin >> sideB;
 
 	float area;
-    area = sideA * sideB;
-	std::cout << "pole prostok¹ta wynosi:" <<area<< "\n";
+	area = sideA * sideB;
+	std::cout << "pole prostok¹ta wynosi:" << area << "\n";
 }
 
 /*Napisz program, który poprosi u¿ytkownika o podanie d³ugoœci podstawy i wysokoœci trójk¹ta, a nastêpnie obliczy pole tego trójk¹ta, wyœwietlaj¹c wynik.*/
@@ -62,7 +62,7 @@ void task4()
 	std::cin >> heightLength;
 
 	float areaOfTtriangle;
-	areaOfTtriangle = baseLength * heightLength/2;
+	areaOfTtriangle = baseLength * heightLength / 2;
 	std::cout << "pole trójk¹ta wynosi:" << areaOfTtriangle << "\n";
 }
 
@@ -127,7 +127,7 @@ void task9()
 	float PLN;
 	std::cout << "podaj ilosc w PLN\n";
 	std::cin >> PLN;
-	
+
 	float euro;
 	euro = PLN / 4.42;
 	std::cout << "Kwota w euro wynosi:\n" << euro << "\n";
@@ -138,7 +138,82 @@ void task10()
 {
 	float numberA;
 	std::cout << "Podaj liczbe A\n";
-	std::cin >> "Poda"
+	std::cin >> numberA;
+
+	float numberB;
+	std::cout << "Podaj liczbe B\n";
+	std::cin >> numberB;
+
+	float arithmeticAverage;
+	arithmeticAverage = (numberA + numberB) / 2;
+	std::cout << "Sredia artmetyczna wynosi:\n" << arithmeticAverage << "\n";
+}
+
+/*Napisz program, który poprosi u¿ytkownika o podanie trzech liczb(a, b, c) i obliczy œredni¹ arytmetyczn¹ tych liczb.Nastêpnie wyœwietli wynik.*/
+void task11()
+{
+	float numberA;
+	std::cout << "Podaj liczbe A\n";
+	std::cin >> numberA;
+
+	float numberB;
+	std::cout << "Podaj liczbe B\n";
+	std::cin >> numberB;
+
+	float numberC;
+	std::cout << "Podaj liczbe C\n";
+	std::cin >> numberC;
+
+	float arithmeticAverage;
+	arithmeticAverage = (numberA + numberB + numberC) / 3;
+	std::cout << "Sredia artmetyczna wynosi:\n" << arithmeticAverage << "\n";
+}
+
+/*Program obliczaj¹cy œredni¹ wa¿on¹ trzech liczb z podanymi odpowiednimi wagami w1, w2 i w3.*/
+void task12()
+{
+	
+}
+
+/*Napisz program, który poprosi u¿ytkownika o podanie dwóch liczb ca³kowitych. Nastêpnie wykona operacje (+, -, *, /) i wyœwietli wyniki.*/
+void task13()
+{
+	float integerA;
+	std::cout << "Podaj pierwsz¹ liczbe\n";
+	std::cin >> integerA;
+
+	float integerB;
+	std::cout << "Podaj drug¹ liczbe\n";
+	std::cin >> integerB;
+
+	float additionResult;
+	additionResult = integerA + integerB;
+	std::cout << "Wynik dodawania wynosi:\n" << additionResult << "\n";
+
+	float subtractionResult;
+	subtractionResult = integerA - integerB;
+	std::cout << "Wynik odejmowania wynosi:\n" << subtractionResult << "\n";
+
+	float multiplicationResult;
+	multiplicationResult = integerA * integerB;
+	std::cout << "Wynik mno¿enia wynosi:\n" << multiplicationResult << "\n";
+
+	float divisionResult;
+	divisionResult = integerA / integerB;
+	std::cout << "Wynik dzielenia wynosi:\n" << divisionResult << "\n";
+}
+
+/* Napisz program, który poprosi u¿ytkownika o podanie liczby sekund i przeliczy je na godziny i minuty, wyœwietlaj¹c wynik.*/
+void task14()
+{
+	float seconds;
+	std::cout << "Podaj Sekundy\n";
+	std::cin >> seconds;
+	
+	float minutes;
+	minutes = seconds * 01;
+	std::cout << "sekundy w przeliczeniu na minuty wynosi\n" << minutes << "\n";
+
 
 }
 
@@ -154,8 +229,11 @@ int main()
 	//task7();
 	//task8();
 	//task9();
-	task10();
-
+	//task10();
+	//task11();
+	//task12();
+	//task13();
+	task14();
 }
 
 
