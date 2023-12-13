@@ -16,11 +16,26 @@ void task1()
 	std::cout << "Podaj liczbe\n";
 	std::cin >> number;
 
+	//wersja 1
 	if (number > 0)
 	{
 		std::cout << "Liczba jest dodatnia\n";
 	}
-	//std::cout << "gsdfas";
+
+	if (number <= 0)
+	{
+		std::cout << "liczba jest ujemna\n";
+	}
+
+	//wersja 2
+	if (number > 0)
+	{
+		std::cout << "Liczba jest dodatna\n";
+	}
+	else
+	{
+		std::cout << "liczba jest ujemna\n";
+	}
 }
 
 int main()
