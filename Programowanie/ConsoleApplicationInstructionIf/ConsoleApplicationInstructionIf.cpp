@@ -93,9 +93,62 @@ void task2()
 	}
 }
 
+//napisz program, który wczyta jedn¹ liczbe i wyswietli wieksza z nich
+void task3()
+{
+	int firstNumber;
+	std::cout << "Podaj liczbe\n";
+	std::cin >> firstNumber;
+
+	std::cout << "Najwieksza wartosc to " << firstNumber << "\n";
+}
+
+//napisz program, który wczyta dwie liczby i wyswietli wieksza z nich
+void task4()
+{
+	int secondNumber;
+	std::cout << "Podaj liczbe\n";
+	std::cin >> secondNumber;
+	int firstNumber;
+	std::cout << "Podaj liczbe\n";
+	std::cin >> firstNumber;
+
+	if (secondNumber > firstNumber)
+		std::cout << "Najwieksza wartosc to" << secondNumber << "\n";
+	else
+		std::cout << "Najwieksza wartosc to" << firstNumber << "\n";
+}
+
+//napisz program, który wczyta trzy liczby i wyswietli wieksza z nich
+void task5()
+{
+	int secondNumber;
+	std::cout << "Podaj liczbe\n";
+	std::cin >> secondNumber;
+	int firstNumber;
+	std::cout << "Podaj liczbe\n";
+	std::cin >> firstNumber;
+	int thirdNumber;
+	std::cout << "Podaj liczbe\n";
+	std::cin >> thirdNumber;
+
+	if (thirdNumber > firstNumber && thirdNumber > secondNumber)
+		std::cout << "Najwieksza wartosc to" << thirdNumber << "\n";
+	else
+	{
+		if (thirdNumber > firstNumber && thirdNumber > secondNumber)
+			std::cout << "Najwieksza wartosc to" << secondNumber << "\n";
+		else
+			std::cout << "Najwieksza wartosc to" << firstNumber << "\n";
+	}
+}
+
 int main()
 {
 	//task1();
-	task2();
+	//task2();
+	//task3();
+	//task4();
+	task5();
 }
 
