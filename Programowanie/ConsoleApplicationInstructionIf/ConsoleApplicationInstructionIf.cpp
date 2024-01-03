@@ -182,4 +182,3 @@ int main()
 	//task5();
 	task6();
 }
-
