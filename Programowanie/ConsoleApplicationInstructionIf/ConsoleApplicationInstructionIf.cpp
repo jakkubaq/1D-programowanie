@@ -308,7 +308,7 @@ void task10()
 //Napisz program, który poprosi u¿ytkownika o podanie liczby ca³kowitej i sprawdzi, czy jest ona parzysta.Wyœwietl odpowiedni komunikat.
 void task11()
 {
-	int number
+	int number;
 	std::cout << "podaj liczbe\n";
 	std::cin >> number;
 
@@ -323,16 +323,244 @@ void task11()
 //Napisz program, który poprosi u¿ytkownika o podanie liczby ca³kowitej i sprawdzi, czy jest ona podzielna zarówno przez 3, jak i przez 5. Wyœwietl odpowiedni komunikat.
 void task12()
 {
-	int number
-		std::cout << "podaj liczbe\n";
+	int number;
+	std::cout << "podaj liczbe\n";
 	std::cin >> number;
 
-	int rest = number % 3 && number % 5;
-		if (rest == 0)
-			std::cout << "liczba jest podzielna\n";
-		else
-			std::cout << "liczba nie jest podzielna\n";
+	int rest = number % (3 && 5);
+
+	if (rest == 0)
+		std::cout << "liczba jest parzysta\n";
+	else
+		std::cout << "liczba nie jest parzysta\n";
 }
+
+
+/*Napisz program, który poprosi u¿ytkownika o podanie masy cia³a(w kilogramach) i wzrostu(w metrach).
+Na podstawie tych danych oblicz wskaŸnik BMI(Body Mass Index) i wyœwietl odpowiedni komunikat informuj¹cy o stanie zdrowia.
+BMI = masa / wzrost ^ 2
+poni¿ej 16 - wyg³odzenie
+16 - 16.99 - wychudzenie
+17 - 18.49 - niedowagê
+18.5 - 24.99 - wagê prawid³ow¹
+25.0 - 29.9 - nadwagê
+30.0 - 34.99 - I stopieñ oty³oœci
+35.0 - 39.99 - II stopieñ oty³oœci
+powy¿ej 40.0 - oty³oœæ skrajn¹
+*/
+
+void task13()
+{
+	double weight, height, bmi;
+	std::cout << "podaj swój wzrost w metrach\n";
+	std::cin >> height;
+	std::cout << "podaj swoj¹ wage\n";
+	std::cin >> weight;
+
+	bmi = weight / (height * height);
+	std::cout << "\n";
+	std::cout << "twoje bmi wynosi:" << bmi << "\n";
+
+	if (bmi <= 15.99)
+	{
+		std::cout << "wyg³odzenie";
+	}
+	else
+	{
+		if (bmi >= 16 && bmi <= 16.99)
+		{
+			std::cout << "wychudzenie";
+		}
+		else
+		{
+			if (bmi >= 17 && bmi <= 18.49)
+			{
+				std::cout << "niedowagê";
+			}
+			else
+			{
+				if (bmi >= 18.5 && bmi <= 24.99)
+				{
+					std::cout << "wagê prawid³ow¹";
+				}
+				else
+				{
+					if (bmi >= 25 && bmi <= 29.9)
+					{
+						std::cout << "nadwagê";
+					}
+					else
+					{
+						if (bmi >= 30 && bmi <= 34.9)
+						{
+							std::cout << "I stopieñ oty³oœci";
+						}
+						else
+						{
+							if (bmi >= 35.0 && bmi <= 39.99)
+							{
+								std::cout << "II stopieñ oty³oœci";
+							}
+							else
+							{
+								if (bmi >= 35.0 && bmi <= 40.0)
+								{
+									std::cout << "oty³oœæ skrajn¹";
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/*Napisz program, który poprosi u¿ytkownika o podanie liczby od 1 do 7 i wyœwietli odpowiadaj¹cy mu dzieñ tygodnia.*/
+void task14()
+{
+	int dayOfTheWeek;
+	std::cout << "podaj liczbe\n";
+	std::cin >> dayOfTheWeek;
+
+	if (dayOfTheWeek == 1)
+	{
+		std::cout << "poniedzia³ek";
+	}
+	else
+	{
+		if (dayOfTheWeek == 2)
+		{
+			std::cout << "wtorek";
+		}
+		else
+		{
+			if (dayOfTheWeek == 3)
+			{
+				std::cout << "sroda";
+			}
+			else
+			{
+				if (dayOfTheWeek == 4)
+				{
+					std::cout << "czwartek";
+				}
+				else
+				{
+					if (dayOfTheWeek == 5)
+					{
+						std::cout << "pi¹tek";
+					}
+					else
+					{
+						if (dayOfTheWeek == 6)
+						{
+							std::cout << "sobota";
+						}
+						else
+						{
+							if (dayOfTheWeek == 7)
+							{
+								std::cout << "niedziela";
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/*Napisz program, który wczyta numer miesi¹ca i wyœwietli jego s³owny odpowiednik.*/
+void task15()
+{
+	int mounth;
+	std::cout << "podaj liczbe\n";
+	std::cin >> mounth;
+
+	if (mounth == 1)
+	{
+		std::cout << "styczen";
+	}
+	else
+	{
+		if (mounth == 2)
+		{
+			std::cout << "luty";
+		}
+		else
+		{
+			if (mounth == 3)
+			{
+				std::cout << "marzec";
+			}
+			else
+			{
+				if (mounth == 4)
+				{
+					std::cout << "kwiecien";
+				}
+				else
+				{
+					if (mounth == 5)
+					{
+						std::cout << "maj";
+					}
+					else
+					{
+						if (mounth == 6)
+						{
+							std::cout << "czerwiec";
+						}
+						else
+						{
+							if (mounth == 7)
+							{
+								std::cout << "lipiec";
+							}
+							else
+							{
+								if (mounth == 8)
+								{
+									std::cout << "sierpien";
+								}
+								else
+								{
+									if (mounth == 9)
+									{
+										std::cout << "wrzesien";
+									}
+									else
+									{
+										if (mounth == 10)
+										{
+											std::cout << "padziernik";
+										}
+										else
+										{
+											if (mounth == 11)
+											{
+												std::cout << "listopad";
+											}
+											else
+											{
+												if (mounth == 12)
+												{
+													std::cout << "grudzien";
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
 
 int main()
 {
@@ -347,5 +575,8 @@ int main()
 	//task9();
 	//task10();
 	//task11();
-	task12();
+	//task12();
+	//task13();
+	//task14();
+	task15();
 }
