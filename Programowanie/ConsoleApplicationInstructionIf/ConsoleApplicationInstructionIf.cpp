@@ -339,7 +339,6 @@ void task12()
 		std::cout << "liczba jest podzielna przez 5\n";
 	else
 		std::cout << "liczba nie jest podzielna przez 5\n";
-	int rest2 = number % 3;
 }
 
 
@@ -594,12 +593,104 @@ void task18()
 {
 	int age;
 	std::cout << "podaj wiek\n";
-	std::cin age;
+	std::cin >> age;
 
-	if (age >= 18);
-
-
+	if (age >= 18)
+		std::cout << "osoba jest pe³noletnia\n";
+	else
+		std::cout << "osoba jest nie pe³noletnia\n";
 }
+
+/*Napisz program, który poprosi u¿ytkownika o podanie d³ugoœci trzech odcinków i sprawdzi, czy mo¿na zbudowaæ z nich trójk¹t.Wyœwietl odpowiedni komunikat.*/
+void task19()
+{
+	int liczba1;
+	std::cout << "podaj 1 liczbe\n";
+	std::cin >> liczba1;
+
+	int liczba2;
+	std::cout << "podaj 2 liczbe\n";
+	std::cin >> liczba2;
+
+	int liczba3;
+	std::cout << "podaj 3 liczbe\n";
+	std::cin >> liczba3;
+
+	if (liczba1 + liczba2 > liczba3)
+		std::cout << "z podanych d³ugosc mozna stworzyc trójk¹t\n";
+	else
+		std::cout << "z podanych d³ugosc nie mozna stworzyc trójk¹t\n";
+}
+
+/*Napisz program, który poprosi u¿ytkownika o podanie oceny w skali 100 - punktowej i przeliczy j¹ na ocenê procentow¹ w przedziale od 0 do 100. Wyœwietl wynik.*/
+void task20()
+{
+	float number, result;
+	std::cout << "Podaj liczbe w skali 0-100\n";
+	std::cin >> number;
+
+	if (number >= 0 && number <= 100)
+	{
+		result = number;
+		std::cout << "ocena procentowa:" << result << "%\n";
+	}
+	else
+	{
+		std::cout << "podana ocena nie znajduje sie w przedziale";
+	}
+}
+
+//Program wyœwietlaj¹cy odpowiedni komunikat w zale¿noœci od podanej oceny(np. "bardzo dobry" dla oceny 5, "dobry" dla oceny 4 itd.)
+void task21()
+{
+	int grade;
+	std::cout << "podaj swoj¹ ocene\n";
+	std::cin >> grade;
+
+	if (grade == 6)
+	{
+		std::cout << "ocena celuj¹ca\n";
+	}
+	else
+	{
+
+		if (grade == 5)
+		{
+			std::cout << "ocena bardzo dobra\n";
+		}
+		else
+		{
+			if (grade == 4)
+			{
+				std::cout << "ocena dobra\n";
+			}
+			else
+			{
+				if (grade == 3)
+				{
+					std::cout << "ocena dostateczna\n";
+				}
+				else
+				{
+					if (grade == 2)
+					{
+						std::cout << "ocena dopuszczaj¹ca\n";
+					}
+					else
+					{
+						if (grade == 1)
+						{
+							std::cout << "ocena niedostateczna\n";
+						}
+					}
+
+				}
+			}
+		}
+	}
+}
+
+
 
 int main()
 {
@@ -619,5 +710,9 @@ int main()
 	//task14();
 	//task15();
 	//task16();
-	task17();
+	//task17();
+	//task18();
+	//task19();
+	//task20();
+	task21();
 }
