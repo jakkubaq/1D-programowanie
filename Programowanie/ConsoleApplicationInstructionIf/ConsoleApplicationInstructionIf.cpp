@@ -327,12 +327,19 @@ void task12()
 	std::cout << "podaj liczbe\n";
 	std::cin >> number;
 
-	int rest = number % (3 && 5);
+	int rest1 = number % 3;
 
-	if (rest == 0)
-		std::cout << "liczba jest parzysta\n";
+	if (rest1 == 0)
+		std::cout << "liczba jest podzielna przez 3\n";
 	else
-		std::cout << "liczba nie jest parzysta\n";
+		std::cout << "liczba nie jest podzielna przez 3\n";
+	int rest2 = number % 5;
+
+	if (rest2 == 0)
+		std::cout << "liczba jest podzielna przez 5\n";
+	else
+		std::cout << "liczba nie jest podzielna przez 5\n";
+	int rest2 = number % 3;
 }
 
 
@@ -561,6 +568,38 @@ void task15()
 	}
 }
 
+/*Napisz program, który poprosi u¿ytkownika o podanie roku i sprawdzi, czy jest to rok przestêpny.Wyœwietl odpowiedni komunikat.*/
+void task16()
+{
+	int rok;
+	std::cout << "podaj rok\n";
+	std::cin >> rok;
+
+	int rest = rok % 4;
+
+	if (rest == 0)
+		std::cout << "rok jest przestepny\n";
+	else
+		std::cout << "rok nie jest przestepny\n";
+}
+
+/*Napisz program, który poprosi u¿ytkownika o podanie liczby ca³kowitej i obliczy jej wartoœæ bezwzglêdn¹.Wyœwietl wynik.*/
+void task17()
+{
+
+}
+
+/* Napisz program, który poprosi u¿ytkownika o podanie wieku i sprawdzi, czy osoba jest pe³noletnia. Wyœwietl odpowiedni komunikat.*/
+void task18()
+{
+	int age;
+	std::cout << "podaj wiek\n";
+	std::cin age;
+
+	if (age >= 18);
+
+
+}
 
 int main()
 {
@@ -578,5 +617,7 @@ int main()
 	//task12();
 	//task13();
 	//task14();
-	task15();
+	//task15();
+	//task16();
+	task17();
 }
