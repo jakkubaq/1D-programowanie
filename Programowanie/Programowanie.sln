@@ -13,6 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02.instrukcje decyzyjne", "
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ConsoleApplicationInstructionIf", "ConsoleApplicationInstructionIf\ConsoleApplicationInstructionIf.vcxproj", "{04866311-E6E3-4936-82EA-44A8F96A7F37}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LoopDoWhileConsoleApplication", "LoopDoWhileConsoleApplication\LoopDoWhileConsoleApplication.vcxproj", "{7A213707-8C1D-4126-BAED-EE38C37CA524}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -45,6 +47,14 @@ Global
 		{04866311-E6E3-4936-82EA-44A8F96A7F37}.Release|x64.Build.0 = Release|x64
 		{04866311-E6E3-4936-82EA-44A8F96A7F37}.Release|x86.ActiveCfg = Release|Win32
 		{04866311-E6E3-4936-82EA-44A8F96A7F37}.Release|x86.Build.0 = Release|Win32
+		{7A213707-8C1D-4126-BAED-EE38C37CA524}.Debug|x64.ActiveCfg = Debug|x64
+		{7A213707-8C1D-4126-BAED-EE38C37CA524}.Debug|x64.Build.0 = Debug|x64
+		{7A213707-8C1D-4126-BAED-EE38C37CA524}.Debug|x86.ActiveCfg = Debug|Win32
+		{7A213707-8C1D-4126-BAED-EE38C37CA524}.Debug|x86.Build.0 = Debug|Win32
+		{7A213707-8C1D-4126-BAED-EE38C37CA524}.Release|x64.ActiveCfg = Release|x64
+		{7A213707-8C1D-4126-BAED-EE38C37CA524}.Release|x64.Build.0 = Release|x64
+		{7A213707-8C1D-4126-BAED-EE38C37CA524}.Release|x86.ActiveCfg = Release|Win32
+		{7A213707-8C1D-4126-BAED-EE38C37CA524}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,6 +63,7 @@ Global
 		{C9699367-F784-48AE-AAEF-D0E89A9696BC} = {05C24B1D-5438-4D1A-B0FA-622D7A9E34C0}
 		{B7000FD7-BEB7-4AF6-A80B-A9AD496AF943} = {05C24B1D-5438-4D1A-B0FA-622D7A9E34C0}
 		{04866311-E6E3-4936-82EA-44A8F96A7F37} = {406D3911-3C5B-4FA2-A440-46B7B12FDA23}
+		{7A213707-8C1D-4126-BAED-EE38C37CA524} = {406D3911-3C5B-4FA2-A440-46B7B12FDA23}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8F3999DB-4B3A-46E5-844C-C7327E3061B8}
