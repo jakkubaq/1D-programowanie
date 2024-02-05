@@ -38,7 +38,50 @@ void task1()
 	std::cout << "podana liczbe " << number << "\n";
 }
 
+//napisz program który wylosuje liczbe a nastepnie uzytkownik bedzie musiał ją obliczyc
+void task2()
+{
+	int randomNumber;
+
+	srand(time(0));
+	randomNumber = rand() % 101;
+
+	//std::cout << "liczba losowa " << randomNumber << "\n";
+
+	int numberFromUser;
+	/*
+	std::cout << "podaj liczbe:\n";
+	std::cin >> numberFromUser;
+	if (numberFromUser != randomNumber)
+	{
+		std::cout << " podaj liczbe:\n";
+		std::cin >> numberFromUser;
+		if (numberFromUser != randomNumber)
+		{
+			std::cout << " podaj liczbe:\n";
+			std::cin >> numberFromUser;
+			if (numberFromUser != randomNumber)
+			{
+				//...
+			}
+		}
+	}
+	*/
+	do
+	{
+		std::cout << "podaj liczbe:\n";
+		std::cin >> numberFromUser;
+		if (numberFromUser > randomNumber)
+			std::cout << "za duza liczba\n";
+		if (numberFromUser < randomNumber)
+			std::cout << "za mała liczba\n";
+	} while (numberFromUser != randomNumber);
+
+	std::cout << "gratuluje!!!\n zgadłes liczbe\n";
+}
+
 int main()
 {
-	task1();
+	//task1();
+	task2();
 }
