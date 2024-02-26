@@ -79,9 +79,76 @@ void task2()
 
 	std::cout << "gratuluje!!!\n zgadłes liczbe\n";
 }
+//napisz program wyswoetlający liczby całkowite z przedziału <0,x) (wartosc x podaje uzytkownik)
+void task3()
+{
+	int upperRange;
+	std::cout << "podaj górny zakres:\n";
+	std::cin >> upperRange;
+
+
+	/*	std::cout << "0, ";
+	if (upperRange >= 1)
+	{
+		std::cout << "1, ";
+		if (upperRange >= 2)
+		{
+			std::cout << "2, ";
+			if(upperRange >=3)
+			{
+					//...
+			}
+		}
+	}
+	*/
+	int number = 0;
+	do
+	{
+		std::cout << number << ", ";
+		number++;
+	} while (upperRange >= number);
+
+}
+
+//napisz program który policzy sumę cyfr podanej przez uzytkownika liczby
+void task4()
+{
+	int number;
+	do
+	{
+		std::cout << "podaj liczbe dodatnią\n";
+		std::cin >> number;
+	} while (number < 0);
+	
+	int tmpNumber;
+
+	tmpNumber = 0;
+	if (number - tmpNumber % 10 != 0)
+	{
+		tmpNumber++;
+		if (number - tmpNumber % 10 != 0)
+		{
+
+			tmpNumber++;
+			if (number - tmpNumber % 10 != 0)
+			{
+				//...
+			}
+		}
+	}
+	std::cout << tmpNumber << ",";
+
+	number = number / 10;
+	if (number > 0)
+	{
+
+	}
+}
 
 int main()
 {
 	//task1();
-	task2();
+	//task2();
+	//task3();
+	task4();
 }
