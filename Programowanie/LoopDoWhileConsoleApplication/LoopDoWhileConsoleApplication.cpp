@@ -79,37 +79,6 @@ void task2()
 
 	std::cout << "gratuluje!!!\n zgadłes liczbe\n";
 }
-//napisz program wyswoetlający liczby całkowite z przedziału <0,x) (wartosc x podaje uzytkownik)
-void task3()
-{
-	int upperRange;
-	std::cout << "podaj górny zakres:\n";
-	std::cin >> upperRange;
-
-
-	/*	std::cout << "0, ";
-	if (upperRange >= 1)
-	{
-		std::cout << "1, ";
-		if (upperRange >= 2)
-		{
-			std::cout << "2, ";
-			if(upperRange >=3)
-			{
-					//...
-			}
-		}
-	}
-	*/
-	int number = 0;
-	do
-	{
-		std::cout << number << ", ";
-		number++;
-	} while (upperRange >= number);
-
-}
-
 //napisz program który policzy sumę cyfr podanej przez uzytkownika liczby
 void task4()
 {
@@ -176,13 +145,30 @@ void task3()
 
 }
 
+/*
+* Napisz program, który poprosi użytkownika o wprowadzenie dowolnej liczby całkowitej. Następnie program powinien obliczyć i wyświetlić liczbę cyfr.
+* Napisz program, który sprawdza czy więcej jest cyfr parzystych, czy nieparzystych we wczytanej liczbie.
+* Poproś użytkownika o podawanie liczb, aż wprowadzi zero. Oblicz sumę oraz średnią arytmetyczną wprowadzonych liczb.
+*/
+
+void task5()
+{
+	int number;
+	std::cout << "Podaj liczbe całkowitą";
+	std::cin >> number;
+	
+	int sumOfDigits;
+	int sumOfDigits = number.lenght();
+
+	std::cout << "liczba cyfr w liczbie" << sumOfDigits << "\n";
+
+}
+
 int main()
 {
 	//task1();
 	//task2();
 	//task3();
-	task4();
-}
-	//task1();
-	task3();
+	//task4();
+	task5();
 }
