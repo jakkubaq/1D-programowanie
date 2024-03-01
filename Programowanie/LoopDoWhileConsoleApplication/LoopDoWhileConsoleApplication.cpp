@@ -154,7 +154,19 @@ void task3()
 /*Napisz program, który poprosi użytkownika o wprowadzenie dowolnej liczby całkowitej.Następnie program powinien obliczyć i wyświetlić liczbę cyfr.*/
 void task5()
 {
+	int number;
+	std::cout << "podaj liczbe całkowita:\n";
+	std::cin >> number;
 
+	int amount_number = 0;
+	int temp = number;
+
+	do
+	{
+		temp /= 10;
+		amount_number++;
+	} while (temp != 0);
+	std::cout << "liczba cyfr podanej liczbie to:" << amount_number << "\n";
 }
 /* Napisz program, który sprawdza czy więcej jest cyfr parzystych, czy nieparzystych we wczytanej liczbie.*/
 void task6()
@@ -224,7 +236,7 @@ int main()
 	//task2();
 	//task3();
 	//task4();
-	//task5();
+	task5();
 	//task6();
-	task7();
+	//task7();
 }
