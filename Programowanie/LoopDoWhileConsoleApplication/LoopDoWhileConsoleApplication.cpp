@@ -230,13 +230,36 @@ void task7()
 		std::cout << "nie wprwadzono zadnych liczb.\n";
 	}
 }
+
+void task8()
+{
+	int number;
+	do
+	{
+		std::cout << "podaj liczbe dodatnią \n";
+		std::cin >> number;
+	} while (number < 0);
+	
+	int numberOfDigits;
+	if (number > 9)
+	{
+		do
+		{
+			number = number / 10;
+			numberOfDigits++;
+		} while (number > 9);
+	}
+	std::cout << "ilosc w liczbie to " << numberOfDigits << "\n"
+}
+
 int main()
 {
 	//task1();
 	//task2();
 	//task3();
 	//task4();
-	task5();
+	//task5();
 	//task6();
 	//task7();
+	task8();
 }
