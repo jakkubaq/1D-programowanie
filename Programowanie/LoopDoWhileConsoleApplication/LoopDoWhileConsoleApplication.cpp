@@ -249,7 +249,7 @@ void task8()
 			numberOfDigits++;
 		} while (number > 9);
 	}
-	std::cout << "ilosc w liczbie to " << numberOfDigits << "\n"
+	std::cout << "ilosc w liczbie to " << numberOfDigits << "\n";
 }
 
 int main()
