@@ -42,13 +42,27 @@ void task1()
 //napisz program, który policzy NWD dwóch liczb
 //nwd(a,b) = a jesli b = 0
 //nwd(a,b) = nwd(b , a%b0 jesli b != 0
-void task2();
+void task2()
 {
 	int a;
 	std::cout << "podaj pierwszą liczbe\n";
 	std::cin >> a;
 
+	int b;
+	std::cout << "podaj drugą liczbe\n";
+	std::cin >> b;
 
+	if (b != 0)
+	{
+		int tmpA = a;
+		a = b;
+		b = tmpA % b;
+		if (b != 0)
+		{
+			//...
+		}
+	}
+	std::cout << "NWD = " << a << "\n";
 }
 
 int main()
