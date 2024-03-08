@@ -101,11 +101,47 @@ void task3()
 	} while (cityT < cityB);
 }
 
+//sprawdz czy liczba jest palindoromem
+void task4()
+{
+	int number;
+	std::cout << "podaj liczbe dodatnią\n";
+	std::cin >> number;
+
+	int tmpNumber = number;
+	int reverseNumber = 0;
+	while (tmpNumber > 0)
+	{
+		int rest = tmpNumber % 10;
+		reverseNumber = reverseNumber * 10 + rest;
+		tmpNumber = tmpNumber / 10;
+	}
+	if (number == reverseNumber)
+		std::cout << "liczba jest palidromem\n";
+	else
+		std::cout << "liczba nie jest palidromem\n";
+}
+
+void task5()
+{
+	int number;
+	std::cout << "podaj liczbe dodatnią\n";
+	std::cin >> number;
+	
+	int counter = 0;
+	while (counter != number)
+	{
+		std::cout << "hello word\n";
+			counter++;
+	}
+}
 
 int main()
 {
 	//task1();
 	//task2();
-	task3();
+	//task3();
+	//task4();
+	task5();
 }
 
