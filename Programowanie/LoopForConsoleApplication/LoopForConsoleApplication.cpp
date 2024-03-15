@@ -74,14 +74,36 @@ void task2()
 //Program obliczający sumę liczb od 1 do 100
 void task3()
 {
-	int suma = 0;
+	int amount = 0;
+	for (int i = 1; i <= 100; i++)
+	{
+		amount += 1;
+	}
+	std::cout << "suma liczb od 1 do 100 wynosi:" << amount << "\n";
+}
 
+//Program sprawdzający czy podana liczba jest liczbą doskonałą (czyli taką, której suma dzielników (z wyłączeniem samej siebie) 
+// jest równa danej liczbie, np. 6 jest liczbą doskonałą, ponieważ 1 + 2 + 3 = 6).
+void task4()
+{
+
+}
+
+//Program wyświetlający na ekranie kwadraty liczb od 1 do 10 (np. 1, 4, 9, 16 itd.)
+void task5()
+{
+	for (int i = 1; i <= 10; ++i)
+	{
+		std::cout << "kwadrat liczby" << i << "to:" << i * i;
+	}
 }
 
 int main()
 {
 	//task1();
 	//task2();
-	task3();
+	//task3();
+	//task4();
+	task5();
 }
 
