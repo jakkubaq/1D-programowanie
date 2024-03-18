@@ -176,7 +176,6 @@ void task11()
 		std::cout << fib[i] << " ";
 	}
 }
-
 int main()
 {
 	//task1();
