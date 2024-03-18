@@ -160,6 +160,23 @@ void task10()
 	std::cout << "wynik potegowania :" << wynik << "\n";
 }
 
+//Program wyświetlający na ekranie ciąg Fibonacciego do 20 elementu (ciąg Fibonacciego to ciąg gdzie każdy element jest sumą dwóch poprzednich, np. 0, 1, 1, 2, 3, 5, 8, 13 itd.)
+void task11()
+{
+	int n = 0;
+	int fib[n];
+	fib[0] = 0;
+	fib[1] = 1;
+	for (int i = 2; i < n; ++i)
+	{
+		fib[i] = fib[i - 1] + fib[i - 2];
+	}
+	for (int i = 0; i < n; ++i)
+	{
+		std::cout << fib[i] << " ";
+	}
+}
+
 int main()
 {
 	//task1();
@@ -171,6 +188,7 @@ int main()
 	//task7();
 	//task8();
 	//task9();
-	task10();
+	//task10();
+	//task11();
 }
 
