@@ -1,8 +1,6 @@
-﻿// CharactersConsoleApplication.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+﻿#include <iostream>
 
-#include <iostream>
-
+//Napisz program który pobierze znak od użytkownika i wyświeli go.
 void task1()
 {
     char characterFromUser;
@@ -20,8 +18,62 @@ void task1()
     characterFromUser = 'a' + 1; // 'b'
 }
 
-int main()
+//napisz program,który wczyta znak klawiatury i sprawdzi czy jest to mała literka alfabetu
+void task2()
 {
-	task1();
+    char characterFromUser;
+    std::cout << "podaj jeden znak:\n";
+    std::cin >> characterFromUser;
+
+    if (characterFromUser == 'a'
+        || characterFromUser == 'b'
+        || characterFromUser == 'c'
+        || characterFromUser == 'd'
+            //...
+        )
+    {
+        std::cout << "podałes małą literke\n";
+    }
+    else
+    {
+        std::cout << "podałes inny znak\n";
+    }
+
+    //wersja 2
+    if (characterFromUser >= 97
+        && characterFromUser <= 122)
+    {
+        std::cout << "podałes mała literke \n";
+    }
+    else
+    {
+        std::cout << "podałes inny znak\n";
+    }
 }
 
+//napisz program, który poprosi cie o twoje imie i cie przywita
+void task3()
+{
+    std::string userName;
+    std::cout << "podaj twoje imie\n";
+    std::cin >> userName;
+
+    std::cout << "witaj" << userName << "tutaj.\n";
+}
+
+//program ktory sprawdzi hasło
+void task4()
+{
+
+}
+
+
+
+
+
+int main()
+{
+    //task1();
+    //task2();
+    task3();
+}
