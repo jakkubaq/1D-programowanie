@@ -110,11 +110,24 @@ void task5()
 
 }
 
+//napisz program ktory bedzie prosil o hasło
+//nie przepusci dalej dopóki nie podasz prawidłowego
+void task6()
+{
+	std::string password;
+	do
+	{
+		std::cout << "podaj swoje hasło\n";
+			std::cin >> password;
+	} while (password != "abc123");
+}
+
 int main()
 {
     //task1();
     //task2();
     //task3();
 	//task4();
-	task5();
+	//task5();
+	task6();
 }
