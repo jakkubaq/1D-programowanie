@@ -110,10 +110,6 @@ void task5()
 
 }
 
-
-
-
-
 int main()
 {
     //task1();
