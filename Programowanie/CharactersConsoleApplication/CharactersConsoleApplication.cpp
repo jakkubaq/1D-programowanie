@@ -118,16 +118,31 @@ void task6()
 	do
 	{
 		std::cout << "podaj swoje hasło\n";
-			std::cin >> password;
+		std::cin >> password;
 	} while (password != "abc123");
+}
+
+/*
+* Poproś użytkownika o wprowadzenie liczby całkowitej w systemie dziesiętnym. Następnie skonwertuj tę liczbę na system dwójkowy (binarny) i wyświetl wynik.
+* Program sprawdzający czy podany ciąg znaków jest palindromem (czyli takim, który czytany od tyłu jest taki sam, jak czytany od przodu, np. "kajak")
+* Program sprawdzający czy podane dwa słowa są anagramami (czyli takimi, które zawierają te same litery, ale w innym układzie, np. "klasa" i "salka")
+* Program wyciągający informacje z numeru PESEL
+* Program implementujący algorytm szyfrowania Cezara (proste szyfrowanie, w którym każdy znak w tekście jest zastępowany innym znakiem, przesuniętym o stałą liczbę pozycji w alfabecie).*/
+
+//Poproś użytkownika o wprowadzenie liczby całkowitej w systemie dziesiętnym. Następnie skonwertuj tę liczbę na system dwójkowy (binarny) i wyświetl wynik.
+void task7()
+{
+	
 }
 
 int main()
 {
+	setlocale(LC_CTYPE, "polish");
     //task1();
     //task2();
     //task3();
 	//task4();
 	//task5();
-	task6();
+	//task6();
+	task7();
 }
