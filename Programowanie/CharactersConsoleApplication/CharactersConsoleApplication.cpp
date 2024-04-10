@@ -96,43 +96,110 @@ void task4()
 //Napisz program, który wczyta łańcuch znaków i policzy ile jest małych liter 'a'.
 void task5()
 {
-	std::string textFromUser;
-	std::cout << "podaj tekst\n";
+	std::string textFromUser = "dfsdfg";
+	std::cout << "Podaj tekst\n";
 	std::cin >> textFromUser;
 
-	std::cout << "podany tekst:" << textFromUser << "\n";
-	std::cout << "pierwszy znak w tekscie:" << textFromUser[0] << "\n";
-	std::cout << "drugi znak w tekscie:" << textFromUser [1] << "\n";
-	int lenght = textFromUser.length();
-	std::cout << "długosc lancucha znaków:" << lenght << "\n";
-	std::cout << "ostatni znak w tekscie:" << textFromUser[lenght - 1] << "\n";
+	std::cout << "Podany tekst: " << textFromUser << "\n";
+	std::cout << "Pierwszy znak w tekście: " << textFromUser[0] << "\n";
+	std::cout << "Drugi znak w tekście: " << textFromUser[1] << "\n";
+	int length = textFromUser.length();
+	std::cout << "Długość łańcucha znaków: " << length << "\n";
+	std::cout << "Ostatni znak w tekście: " << textFromUser[length - 1] << "\n";
 
+	int counter = 0;
+	for (int i = 0; i < length; i++)
+	{
+		if (textFromUser[i] == 'a')
+			counter++;
+	}
 
+	std::cout << "Małych liter 'a' jest: " << counter << "\n";
 }
 
-//napisz program ktory bedzie prosil o hasło
-//nie przepusci dalej dopóki nie podasz prawidłowego
+// Napisz program, który będzie prosił o hasło.
+// Nie przepuści dalej dopóki nie zostanie ono podane prawidłowo.
 void task6()
 {
 	std::string password;
 	do
 	{
-		std::cout << "podaj swoje hasło\n";
+		std::cout << "Podaj hasło\n";
 		std::cin >> password;
 	} while (password != "abc123");
 }
 
+//Napisz program, który pobiera od użytkownika ciąg znaków 
+// i wyświetla liczbę samogłosek i spółgłosek w tym ciągu.
+void task7()
+{
+	std::string textFromUser;
+	std::cout << "Podaj tekst\n";
+	std::cin >> textFromUser;
+
+
+}
+
+//Poproś użytkownika o wprowadzenie liczby całkowitej w systemie dziesiętnym. 
+// Następnie skonwertuj tę liczbę na system dwójkowy (binarny) i wyświetl wynik.
+void task8()
+{
+	int number = 14 + 7;
+	std::cout << "Podaj liczbę:\n";
+	std::cin >> number;
+
+	int tmpNumber = number;
+	std::string binNumber = "";
+
+	do
+	{
+		int rest = tmpNumber % 2;
+		tmpNumber = tmpNumber / 2;
+		if (rest == 0)
+			binNumber = "0" + binNumber;
+		else
+			binNumber = "1" + binNumber;
+
+	} while (tmpNumber != 0);
+
+	std::cout << "Liczba " << number << " binarnie to " << binNumber << "\n";
+}
+
+//Program sprawdzający czy podany ciąg znaków jest palindromem 
+// (czyli takim, który czytany od tyłu jest taki sam, jak czytany od przodu, np. "kajak")
+
+void task9()
+{
+	std::string textFromUser;
+	std::cout << "Podaj tekst\n";
+	std::cin >> textFromUser;
+
+	bool isPalindrome = true;
+
+	//sprawdzenie przeciwieństwa
+	for (int fromStart = 0, fromEnd = textFromUser.length() - 1; fromStart < fromEnd; fromStart++, fromEnd--)
+	{
+		if (textFromUser[fromStart] != textFromUser[fromEnd])
+		{
+			isPalindrome = false;
+			break;
+		}
+	}
+
+	if (isPalindrome == true)
+		std::cout << "Ten wyraz jest palindromem\n";
+	else
+		std::cout << "Ten wyraz nie jest palindromem\n";
+}
+
 /*
-* Poproś użytkownika o wprowadzenie liczby całkowitej w systemie dziesiętnym. Następnie skonwertuj tę liczbę na system dwójkowy (binarny) i wyświetl wynik.
-* Program sprawdzający czy podany ciąg znaków jest palindromem (czyli takim, który czytany od tyłu jest taki sam, jak czytany od przodu, np. "kajak")
 * Program sprawdzający czy podane dwa słowa są anagramami (czyli takimi, które zawierają te same litery, ale w innym układzie, np. "klasa" i "salka")
 * Program wyciągający informacje z numeru PESEL
 * Program implementujący algorytm szyfrowania Cezara (proste szyfrowanie, w którym każdy znak w tekście jest zastępowany innym znakiem, przesuniętym o stałą liczbę pozycji w alfabecie).*/
 
-//Poproś użytkownika o wprowadzenie liczby całkowitej w systemie dziesiętnym. Następnie skonwertuj tę liczbę na system dwójkowy (binarny) i wyświetl wynik.
-void task7()
+void task10()
 {
-	
+
 }
 
 int main()
@@ -144,5 +211,8 @@ int main()
 	//task4();
 	//task5();
 	//task6();
-	task7();
+	//task7();
+	//task8();
+	//task9();
+	task10();
 }
