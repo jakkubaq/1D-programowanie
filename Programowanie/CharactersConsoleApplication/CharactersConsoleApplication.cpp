@@ -200,6 +200,7 @@ void task9()
 void task10()
 {
 
+
 }
 
 int main()
