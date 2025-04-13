@@ -20,8 +20,8 @@ int reverseNumber(int num)
 	int reversed = 0; 
 	while (num > 0) 
 	{
-		reversed = reversed * 10 + (num % 10); // Dodajemy ostatnią cyfrę do odwróconej liczby
-		num = num / 10; // Usuwanie ostatniej cyfry
+		reversed = reversed * 10 + (num % 10); // Dodaje ostatnią cyfrę do odwróconej liczby
+		num = num / 10; // Usuwa ostatnie cyfry
 	}
 	return reversed; 
 }
