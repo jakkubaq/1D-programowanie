@@ -84,13 +84,13 @@ int main()
 	{
 		bool alreadyExists = false; // Czy liczba już była
 
-		for (int j = 0; j < uniqueValues.size(); j++) // Sprawdzanie unikalnych
+		for (int j = 0; j < uniqueValues.size(); j++) // Sprawdzanie unikalnych liczb
 		{
 			if (uniqueValues[j] == allNumbers[i]) // Jeśli już była
 			{
 				valueCounts[j]++; // Zwiększamy licznik
-				alreadyExists = true; // Flaga
-				break; // Wychodzimy z pętli
+				alreadyExists = true; 
+				break; // Wychodzi z pętli
 			}
 		}
 		if (!alreadyExists) // Jeśli jest nowa liczba
