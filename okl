@@ -1,0 +1,92 @@
+#include <iostream>
+#include <fstream>
+#include <vector>
+#include <string>
+#include <algorithm>
+
+bool has_only_even_digits(int number) {
+	std::string str = std::to_string(number);
+	for (char digit : str) {
+		if ((digit - '0') % 2 != 0){
+			return false;
+		}
+	}
+	return true;
+}
+
+int numberShort(int number)
+{
+	if (number > 0)
+	{
+		int numShort = 0;
+		int multiplier = 1;
+
+		while (number > 0)
+		{
+			int digit = number % 10;
+			if (digit % 2 == 1)
+			{
+				numShort = digit * multiplier + numShort;
+				multiplier *= 10;
+			}
+			number /= 10;
+		}
+
+		return numShort;
+	}
+	return 0; // obsługa przypadku number <= 0
+}
+
+// Zadanie 3 - Największy wspólny dzielnik
+int greatestCommonDivisor(int a, int b) {
+	while (b != 0) {
+		int temp = b;
+		b = a % b;
+		a = temp;
+	}
+	return a;
+}
+
+int main()
+{
+	setlocale(LC_CTYPE, "Polish");
+	std::ifstream input("skrot.txt");
+	if (!input.is_open()) {
+		std::cerr << "Failed to open skrot.txt\n";
+		return 1;
+	}
+
+	std::vector<int> even_digit_numbers;
+	int number;
+
+	while (input >> number) {
+		if (has_only_even_digits(number)){
+			even_digit_numbers.push_back(number);
+		}
+	}
+	input.close();
+
+	std::cout << "Liczba liczb zawierających tylko parzyste cyfry: " << even_digit_numbers.size() << "\n";
+
+	if (!even_digit_numbers.empty()){
+		int max_number = *std::max_element(even_digit_numbers.begin(), even_digit_numbers.end());
+		std::cout << "Maksymalna liczba z parzystymi cyframi: " << max_number << "\n";
+	}
+	else {
+		std::cout << "Nie znaleziono liczb z wyłącznie parzystymi cyframi.\n";
+	}
+
+	// Zadanie 3
+	std::cout << "Zadanie 3: ";
+	for (int num : even_digit_numbers)
+	{
+		int numShort = numberShort(num);
+		if (greatestCommonDivisor(num, numShort) == 7)
+		{
+			std::cout << num << ", ";
+		}
+	}
+	std::cout << "\n";
+
+	return 0;
+}
