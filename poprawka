@@ -1,0 +1,11 @@
+// Zadanie 3
+std::cout << "Zadanie 3: ";
+for (int num : all_numbers)
+{
+	int numShort = numberShort(num);
+	if (numShort != 0 && greatestCommonDivisor(num, numShort) == 7)
+	{
+		std::cout << num << ", ";
+	}
+}
+std::cout << "\n";
