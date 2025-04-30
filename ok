@@ -1,0 +1,92 @@
+#include <iostream>
+#include <fstream>
+#include <vector>
+#include <string>
+#include <algorithm>
+#include <locale>
+
+bool has_only_even_digits(int number) {
+    std::string str = std::to_string(number);
+    for (char digit : str) {
+        if ((digit - '0') % 2 != 0){
+            return false;
+        }
+    }
+    return true;
+}
+
+int gcd(int a, int b) {
+    while (b != 0) {
+        int temp = b;
+        b = a % b;
+        a = temp;
+    }
+    return a;
+}
+
+int smallest_odd_divisor(int n) {
+    for (int i = 3; i <= n; i += 2) {
+        if (n % i == 0) {
+            return i;
+        }
+    }
+    return n; // liczba nieparzysta pierwsza
+}
+
+int main() {
+    setlocale(LC_CTYPE, "Polish");
+
+    std::ofstream output("wyniki3_3.txt");
+    if (!output.is_open()) {
+        std::cerr << "Nie udało się otworzyć pliku wyniki3_3.txt\n";
+        return 1;
+    }
+
+    std::vector<int> even_digit_numbers;
+    std::vector<int> zad3_numbers;
+
+    std::cout << "Podaj liczby oddzielone spacjami (np. 20 liczb):\n";
+
+    int number;
+    while (std::cin >> number) {
+        // Zadanie 2
+        if (has_only_even_digits(number)) {
+            even_digit_numbers.push_back(number);
+        }
+
+        // Zadanie 3
+        int skrot = smallest_odd_divisor(number);
+        if (gcd(number, skrot) == 7) {
+            zad3_numbers.push_back(number);
+            output << number << "\n";
+        }
+
+        // Przerwij po Enterze bez danych (Ctrl+Z w Windows lub Ctrl+D w Linux/Mac)
+        if (std::cin.peek() == '\n') break;
+    }
+
+    output.close();
+
+    // Wyniki zadania 2
+    std::cout << "\nZadanie 2:\n";
+    std::cout << "Liczba liczb z samymi parzystymi cyframi: " << even_digit_numbers.size() << "\n";
+    if (!even_digit_numbers.empty()) {
+        int max_number = *std::max_element(even_digit_numbers.begin(), even_digit_numbers.end());
+        std::cout << "Największa z nich: " << max_number << "\n";
+    } else {
+        std::cout << "Brak liczb z samymi parzystymi cyframi.\n";
+    }
+
+    // Wyniki zadania 3
+    std::cout << "\nZadanie 3:\n";
+    if (!zad3_numbers.empty()) {
+        std::cout << "Liczby spełniające warunek (NWD = 7):\n";
+        for (int n : zad3_numbers) {
+            std::cout << n << "\n";
+        }
+    } else {
+        std::cout << "Brak liczb spełniających warunek z zadania 3.\n";
+    }
+
+    return 0;
+}
