@@ -4,81 +4,85 @@
 #include <string>
 #include <algorithm>
 
+// Funkcja sprawdzająca, czy liczba składa się wyłącznie z parzystych cyfr
 bool has_only_even_digits(int number) {
-    std::string str = std::to_string(number);
-    for (char digit : str) {
-        if ((digit - '0') % 2 != 0) {
-            return false;
+    std::string str = std::to_string(number); // Zamiana liczby na ciąg znaków
+    for (char digit : str) { // Iteracja po każdej cyfrze
+        if ((digit - '0') % 2 != 0) { // Sprawdzenie, czy cyfra jest nieparzysta
+            return false; // Jeśli tak, zwróć false
         }
     }
-    return true;
+    return true; // Jeśli wszystkie cyfry są parzyste, zwróć true
 }
 
+// Funkcja skracająca liczbę o usunięcie nieparzystych cyfr
 int numberShort(int number) {
-    int numShort = 0;
-    int multiplier = 1;
+    int numShort = 0; // Zmienna na skróconą liczbę
+    int multiplier = 1; // Zmienna do ustawiania miejsca dla cyfr w wyniku
 
-    while (number > 0) {
-        int digit = number % 10;
-        if (digit % 2 == 1) {
-            numShort = digit * multiplier + numShort;
-            multiplier *= 10;
+    while (number > 0) { // Dopóki liczba nie będzie równa 0
+        int digit = number % 10; // Pobierz ostatnią cyfrę
+        if (digit % 2 == 1) { // Jeśli cyfra jest nieparzysta
+            numShort = digit * multiplier + numShort; // Dodaj cyfrę do wyniku
+            multiplier *= 10; // Zwiększ miejsce na kolejną cyfrę
         }
-        number /= 10;
+        number /= 10; // Usuń ostatnią cyfrę z liczby
     }
 
-    if (numShort == 0) return 1; // zapobiega NWD z 0
-    return numShort;
+    if (numShort == 0) return 1; // Jeśli wynik to 0, zwróć 1 (zapobiega NWD z 0)
+    return numShort; // Zwróć skróconą liczbę
 }
 
+// Funkcja obliczająca największy wspólny dzielnik (NWD) dwóch liczb
 int greatestCommonDivisor(int a, int b) {
-    while (b != 0) {
-        int temp = b;
-        b = a % b;
-        a = temp;
+    while (b != 0) { // Dopóki b nie jest równe 0
+        int temp = b; // Przechowaj b
+        b = a % b; // Oblicz resztę z dzielenia
+        a = temp; // Przypisz b do a
     }
-    return a;
+    return a; // Zwróć NWD
 }
 
 int main() {
-    setlocale(LC_CTYPE, "Polish");
-    std::ifstream input("skrot.txt");
-    if (!input.is_open()) {
-        std::cerr << "Nie udało się otworzyć pliku skrot.txt\n";
-        return 1;
+    setlocale(LC_CTYPE, "Polish"); // Ustawienie lokalizacji na polski
+    std::ifstream input("skrot.txt"); // Otwarcie pliku do odczytu
+    if (!input.is_open()) { // Sprawdzenie, czy plik został poprawnie otwarty
+        std::cerr << "Nie udało się otworzyć pliku skrot.txt\n"; // Wypisanie błędu
+        return 1; // Zakończenie programu w przypadku błędu
     }
 
-    std::vector<int> even_digit_numbers;
-    std::vector<int> all_numbers; // <-- DODANE
+    std::vector<int> even_digit_numbers; // Wektor na liczby z parzystymi cyframi
+    std::vector<int> all_numbers; // Wektor na wszystkie liczby
     int number;
 
-    while (input >> number) {
-        all_numbers.push_back(number); // <-- DODANE
-        if (has_only_even_digits(number)) {
-            even_digit_numbers.push_back(number);
+    while (input >> number) { // Odczyt liczb z pliku
+        all_numbers.push_back(number); // Dodanie liczby do wektora wszystkich liczb
+        if (has_only_even_digits(number)) { // Jeśli liczba ma tylko parzyste cyfry
+            even_digit_numbers.push_back(number); // Dodaj ją do wektora
         }
     }
-    input.close();
+    input.close(); // Zamknięcie pliku
 
-    // Zadanie 2
+    // Zadanie 2: Wyświetlenie liczby liczb z wyłącznie parzystymi cyframi
     std::cout << "Liczba liczb z wyłącznie parzystymi cyframi: " << even_digit_numbers.size() << "\n";
 
+    // Wyświetlenie największej liczby z parzystymi cyframi
     if (!even_digit_numbers.empty()) {
-        int max_number = *std::max_element(even_digit_numbers.begin(), even_digit_numbers.end());
+        int max_number = *std::max_element(even_digit_numbers.begin(), even_digit_numbers.end()); // Znalezienie maksymalnej liczby
         std::cout << "Maksymalna liczba z parzystymi cyframi: " << max_number << "\n";
     } else {
-        std::cout << "Nie znaleziono liczb z wyłącznie parzystymi cyframi.\n";
+        std::cout << "Nie znaleziono liczb z wyłącznie parzystymi cyframi.\n"; // Jeśli nie znaleziono żadnej liczby
     }
 
-    // Zadanie 3
+    // Zadanie 3: Wyszukiwanie liczb, których skrócona wersja ma NWD 7 z oryginalną liczbą
     std::cout << "Zadanie 3: ";
-    for (int num : all_numbers) {
-        int numShort = numberShort(num);
-        if (numShort != 0 && greatestCommonDivisor(num, numShort) == 7) {
-            std::cout << num << ", ";
+    for (int num : all_numbers) { // Dla każdej liczby
+        int numShort = numberShort(num); // Skrócenie liczby
+        if (numShort != 0 && greatestCommonDivisor(num, numShort) == 7) { // Sprawdzenie, czy NWD = 7
+            std::cout << num << ", "; // Wyświetlenie liczby
         }
     }
-    std::cout << "\n";
+    std::cout << "\n"; // Nowa linia po wypisaniu wyników
 
-    return 0;
+    return 0; // Zakończenie programu
 }
